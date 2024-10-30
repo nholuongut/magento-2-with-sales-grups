@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Genaker_SalesGroup::salesgroup_salesgroup" title="Sales Group" module="Genaker_SalesGroup" sortOrder="999" resource="Magento_Backend::content" parent="Magento_Customer::customer" action="salesgroup/salesgroup/index"/>
+	</menu>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+<!--
+<event name="sales_order_load_after">
+    <observer name="sales_order_load_order_attribute_group_sales_sdfsdf" instance="Genaker\SalesGroup\OrderLoadAfter" />
+</event>
+-->
+<event name="sales_order_save_before">
+        <observer name="sales_sdfsdf_sales_order_save_before" instance="Genaker\SalesGroup\OrderSaveBefore" />
+</event>
+
+</config>

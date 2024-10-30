@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="salesgroup_salesgroup" resource="default" engine="innodb" comment="salesgroup_salesgroup Table">
+		<column xsi:type="smallint" name="salesgroup_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="salesgroup_id"/>
+		</constraint>
+		<column name="name" nullable="true" xsi:type="varchar" length="250" comment="Name"/>
+		<column name="sales_group_code" nullable="true" xsi:type="varchar" length="250" comment="Sales group code"/>
+	</table> 
+	<table name="sales_order">
+        	<column xsi:type="smallint" name="sales_group_id" padding="5" unsigned="true" nullable="true" identity="false"
+                	comment="Sales Group ID"/>
+       </table>
+	<table name="sales_order">
+        	<column xsi:type="varchar" name="sales_group_name" nullable="true" comment="Sales Group Name"/>
+      </table>
+	<table name="sales_order_grid">
+		<column xsi:type="varchar" name="sales_group_name" nullable="true" comment="Sales Group Name" />
+	</table>
+
+</schema>

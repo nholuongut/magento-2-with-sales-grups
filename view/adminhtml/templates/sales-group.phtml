@@ -1,0 +1,19 @@
+<?php 
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+$order = $objectManager->get('\Magento\Sales\Block\Adminhtml\Order\View\Info')->getOrder();
+  
+
+?>
+
+<table class="admin__table-secondary order-account-information-table grid">
+                    <tbody>
+                        <tr>
+                        <th style = "background-color: white;">Sales Group</th>
+                        <td style = "background-color: white;">
+                             <span><?= $order->getData('sales_group_name') ?></span>
+                        </td>
+                    </tr>                                  
+                </tbody>
+            </table>
+
+

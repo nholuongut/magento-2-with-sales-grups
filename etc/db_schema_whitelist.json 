@@ -1,0 +1,17 @@
+{
+    "salesgroup_salesgroup": {
+        "column": {
+            "salesgroup_id": true,
+            "name": true,
+            "sales_group_code": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "customer_entity": {
+        "column": {
+            "sales_group_id": true
+        }
+    }
+}

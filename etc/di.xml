@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Genaker\SalesGroup\Api\SalesGroupRepositoryInterface" type="Genaker\SalesGroup\Model\SalesGroupRepository"/>
+	<preference for="Genaker\SalesGroup\Api\Data\SalesGroupInterface" type="Genaker\SalesGroup\Model\Data\SalesGroup"/>
+	<preference for="Genaker\SalesGroup\Api\Data\SalesGroupSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Genaker\SalesGroup\Model\ResourceModel\SalesGroup\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">salesgroup_salesgroup</argument>
+			<argument name="resourceModel" xsi:type="string">Genaker\SalesGroup\Model\ResourceModel\SalesGroup\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="salesgroup_salesgroup_listing_data_source" xsi:type="string">Genaker\SalesGroup\Model\ResourceModel\SalesGroup\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+	<preference for="Magento\Sales\Api\OrderRepositoryInterface" type="Genaker\SalesGroup\Model\OrderRepository"/>
+	<virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+		<arguments>
+		<argument name="columns" xsi:type="array">
+			<item name="sales_group_name" xsi:type="string">sales_order.sales_group_name</item>
+		</argument>
+		</arguments>
+	</virtualType>
+</config>

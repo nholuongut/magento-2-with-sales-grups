@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Genaker_SalesGroup::SalesGroup" title="SalesGroup" sortOrder="10">
+					<resource id="Genaker_SalesGroup::SalesGroup_save" title="Save SalesGroup" sortOrder="10"/>
+					<resource id="Genaker_SalesGroup::SalesGroup_delete" title="Delete SalesGroup" sortOrder="20"/>
+					<resource id="Genaker_SalesGroup::SalesGroup_update" title="Update SalesGroup" sortOrder="30"/>
+					<resource id="Genaker_SalesGroup::SalesGroup_view" title="View SalesGroup" sortOrder="40"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>
